@@ -1,0 +1,1 @@
+from .test_value_object import TestValueObject
