@@ -20,7 +20,7 @@ class ExampleAggregateRoot(AggregateRoot[GenericUUID]):
 class TestAggregateRoot:
     def test_instantiation(self):
         aggregate_root = ExampleAggregateRoot(
-            id=GenericUUID.next_id(),
+            id=ExampleAggregateRoot.next_id(),
             member=ExampleValueObject(example_variable=99)
         )
         assert aggregate_root.member.example_variable == 99
